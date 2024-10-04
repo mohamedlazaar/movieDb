@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const API_URL = 'https://www.omdbapi.com'; // Ensure this is the correct API URL
 const API_KEY = '2c8d0989'; // Replace with your actual API key
 
-function MovieDetail() {
+function MovieDetails() {
   const { id } = useParams(); // Get the movie ID from the URL parameters
   const [movieDetails, setMovieDetails] = useState(null); // State to store movie details
   const [error, setError] = useState(''); // State to store any errors
@@ -47,12 +47,12 @@ function MovieDetail() {
         <>
           <img src={movieDetails.Poster} alt={movieDetails.Title} className="md:w-2/3 mx-auto" />
           <div className="container flex flex-col justify-center text-left md:space-y-4 space-y-2 text-white p-5">
-            <h1 className="text-3xl font-bold">{movieDetails.Title}</h1>
-            <p><strong className="text-red-700 text-lg">Release Date:</strong> {movieDetails.Released}</p>
-            <p><strong className="text-red-700 text-lg">Genre:</strong> {movieDetails.Genre}</p>
-            <p><strong className="text-red-700 text-lg">Plot:</strong> {movieDetails.Plot}</p>
-            <p><strong className="text-red-700 text-lg">Cast:</strong> {movieDetails.Actors}</p>
-            <p><strong className="text-red-700 text-lg">Ratings:</strong></p>
+            <h1 className="text-3xl md:text-4xl  font-bold">{movieDetails.Title}</h1>
+            <p><strong className="text-gray-400 underline text-lg">Release Date:</strong> {movieDetails.Released}</p>
+            <p><strong className="text-gray-400 underline text-lg">Genre:</strong> {movieDetails.Genre}</p>
+            <p><strong className="text-gray-400 underline text-lg">Plot:</strong> {movieDetails.Plot}</p>
+            <p><strong className="text-gray-400 underline text-lg">Cast:</strong> {movieDetails.Actors}</p>
+            <p><strong className="text-gray-400 underline text-lg">Ratings:</strong></p>
             <ul>
               {movieDetails.Ratings.map((rating) => (
                 <li key={rating.Source}>
@@ -67,4 +67,4 @@ function MovieDetail() {
   );
 }
 
-export default MovieDetail;
+export default MovieDetails;

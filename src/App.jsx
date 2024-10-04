@@ -4,7 +4,7 @@ import SearchBar from './components/SearchBar';
 import MovieCard from './components/MovieCard';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import MovieDetail from './components/MovieDetail';
+import MovieDetails from './components/MovieDetails';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -102,7 +102,7 @@ function App() {
           />
 
           {/* Movie Detail Page */}
-          <Route path="/movie/:id" element={<MovieDetail />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
       </Router>
     </>
