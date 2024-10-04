@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root{
+  font-family: "poppins", sans-serif;
+}
+body{
+  background: rgb(24,175,223);
+background: linear-gradient(180deg, rgba(24,175,223,1) 0%, rgba(0,0,0,1) 100%);
+background-repeat: no-repeat;
+background-size: contain;
+min-height: 100vh;
+}
