@@ -10,7 +10,7 @@ function NavBar() {
         <div className=" flex flex-row gap-5">
           {/* Search Link */}
         <Link to='/' className='text-black hover:text-white transition-all underline'>Search</Link>
-        <Link to='/favorites' className='text-white hover:text-white transition-all underline'>Favorites</Link>
+        <Link to='/favorites' className='text-black hover:text-white transition-all underline'>Favorites</Link>
         </div>
    
     </div>
