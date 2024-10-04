@@ -13,7 +13,7 @@ function App() {
 
   // Fetch Movies from API based on search term
   async function getMovie(searchMovie) {
-    const url = "http://www.omdbapi.com";
+    const url = "https://www.omdbapi.com";
     const response = await fetch(`${url}?s=${searchMovie}&apikey=2c8d0989`);
     const data = await response.json();
     console.log(data.Search);
