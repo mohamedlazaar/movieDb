@@ -10,13 +10,13 @@ const MovieCard = ({ movies, favorites, handleFavoriteClicks }) => {
   return (
     <div className="movie-grid  grid grid-cols-1 md:grid-cols-3 gap-14 ">
       {movies.map((movie, index) => (
-        <div key={index} className="movie-card container mx-auto flex flex-col border-2 justify-around border-gray-500 rounded-3xl items-center shaddow-2xl shaddow-black  overflow-hidden bg-white">
+        <div key={index} className="movie-card container mx-auto flex flex-col border-2 justify-around border-gray-500 rounded-3xl items-center shaddow-2xl shaddow-black  overflow-hidden bg-white hover:scale-105 transition-all">
           <Link to={`/movie/${movie.imdbID}`} className='w-full hover:bg-white mt-10' style={{width:"75%"}}>
             <img src={movie.Poster} alt={movie.Title} className=' h-full w-full mx-auto' />
           </Link>
           <div className="movie-info flex flex-col gap-5 justify-between w-full items-center 
          py-3 mb-5">
-            <h3>{movie.Title}</h3>
+            <h3 className='font-bold'>{movie.Title}</h3>
 
             {/* Conditional rendering for favorite buttons */}
             <div className="flex  justify-around w-full align-center">
