@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const API_URL = 'https://www.omdbapi.com'; // Ensure this is the correct API URL
-const API_KEY = '2c8d0989'; // Replace with your actual API key
+// API URL
+const API_URL = 'https://www.omdbapi.com'; 
+// API KEY
+const API_KEY = '2c8d0989'; 
 
 function MovieDetails() {
   const { id } = useParams(); // Get the movie ID from the URL parameters

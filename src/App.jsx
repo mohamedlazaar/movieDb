@@ -16,7 +16,6 @@ function App() {
     const url = "https://www.omdbapi.com";
     const response = await fetch(`${url}?s=${searchMovie}&apikey=2c8d0989`);
     const data = await response.json();
-    console.log(data.Search);
     if (data.Search) {
       setMovies(data.Search);
     }
@@ -76,7 +75,7 @@ function App() {
                 ) : (
                   <MovieCard
                     movies={movies}
-                    favorites={favorites} // Pass favorites to MovieCard
+                    favorites={favorites} 
                     handleFavoriteClicks={(movie) => isFavorite(movie) ? removeFavoriteClick(movie) : addFavoriteClick(movie)} // Handle add/remove based on state
                   />
                 )}
@@ -93,8 +92,8 @@ function App() {
                 {favorites.length === 0 ? <h1>No Favourite Movies</h1> :
                   <MovieCard
                     movies={favorites}
-                    favorites={favorites} // Pass favorites to MovieCard
-                    handleFavoriteClicks={removeFavoriteClick} // Only remove in favorites
+                    favorites={favorites} 
+                    handleFavoriteClicks={removeFavoriteClick} 
                   />
                 }
               </div>
